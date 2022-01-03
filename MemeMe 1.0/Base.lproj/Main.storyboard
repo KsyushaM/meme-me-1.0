@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-uD-1fO">
+                                <rect key="frame" x="0.0" y="83" width="375" height="656"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXQ-lg-O4v">
+                                <rect key="frame" x="0.0" y="739" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem title="Pick from library" width="227.33333333333334" id="cvh-UI-S9d">
+                                        <connections>
+                                            <action selector="pickAnImageFromLibrary:" destination="BYZ-38-t0r" id="Mrb-Ge-GzW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Take a photo" id="EYa-HD-PbR">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="2Nd-3R-UOX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-bY-V5a" userLabel="Bottom Text Field">
+                                <rect key="frame" x="139" y="666" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-hh-Y2i" userLabel="Top Text Field">
+                                <rect key="frame" x="139" y="83" width="97" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Jq-hh-Y2i" secondAttribute="trailing" constant="139" id="2hx-J8-NSz"/>
+                            <constraint firstItem="HXQ-lg-O4v" firstAttribute="top" secondItem="xMH-uD-1fO" secondAttribute="bottom" id="4tb-s7-chX"/>
+                            <constraint firstItem="HXQ-lg-O4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AEm-Wx-fzC"/>
+                            <constraint firstAttribute="bottom" secondItem="HXQ-lg-O4v" secondAttribute="bottom" constant="24" id="LmX-DG-vyb"/>
+                            <constraint firstItem="xMH-uD-1fO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Tkf-U2-rys"/>
+                            <constraint firstItem="xMH-uD-1fO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Xjp-F2-VmG"/>
+                            <constraint firstItem="xMH-uD-1fO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="hVU-Gk-A8M"/>
+                            <constraint firstItem="xMH-uD-1fO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRf-hW-yAH"/>
+                            <constraint firstAttribute="trailing" secondItem="HXQ-lg-O4v" secondAttribute="trailing" id="m95-Ux-Tfc"/>
+                            <constraint firstItem="xMH-uD-1fO" firstAttribute="leading" secondItem="HXQ-lg-O4v" secondAttribute="leading" id="mCI-QI-Vg4"/>
+                            <constraint firstItem="2Jq-hh-Y2i" firstAttribute="centerX" secondItem="xMH-uD-1fO" secondAttribute="centerX" id="qD7-y5-M39"/>
+                            <constraint firstItem="2Jq-hh-Y2i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="ysq-Bg-MUL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="RAP-bY-V5a" id="ith-Jf-2UP"/>
+                        <outlet property="cameraButton" destination="EYa-HD-PbR" id="HPP-24-Gvo"/>
+                        <outlet property="imagePickerView" destination="xMH-uD-1fO" id="DqG-Qp-dFm"/>
+                        <outlet property="topText" destination="2Jq-hh-Y2i" id="kXY-d9-xTj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="97.536945812807886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
