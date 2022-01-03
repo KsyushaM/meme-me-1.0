@@ -34,16 +34,21 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-bY-V5a" userLabel="Bottom Text Field">
-                                <rect key="frame" x="139" y="666" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-bY-V5a" userLabel="Bottom Text Field">
+                                <rect key="frame" x="24" y="630" width="327" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Sam-Wv-jRk"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-hh-Y2i" userLabel="Top Text Field">
-                                <rect key="frame" x="139" y="83" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-hh-Y2i" userLabel="Top Text Field">
+                                <rect key="frame" x="24" y="83" width="327" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="poj-8B-hT4"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -51,12 +56,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Jq-hh-Y2i" secondAttribute="trailing" constant="139" id="2hx-J8-NSz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Jq-hh-Y2i" secondAttribute="trailing" constant="24" id="2hx-J8-NSz"/>
                             <constraint firstItem="HXQ-lg-O4v" firstAttribute="top" secondItem="xMH-uD-1fO" secondAttribute="bottom" id="4tb-s7-chX"/>
                             <constraint firstItem="HXQ-lg-O4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AEm-Wx-fzC"/>
+                            <constraint firstItem="HXQ-lg-O4v" firstAttribute="top" secondItem="RAP-bY-V5a" secondAttribute="bottom" constant="39" id="JC0-RL-CTm"/>
                             <constraint firstAttribute="bottom" secondItem="HXQ-lg-O4v" secondAttribute="bottom" constant="24" id="LmX-DG-vyb"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Tkf-U2-rys"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Xjp-F2-VmG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RAP-bY-V5a" secondAttribute="trailing" constant="24" id="cDe-mc-2Xy"/>
+                            <constraint firstItem="RAP-bY-V5a" firstAttribute="centerX" secondItem="xMH-uD-1fO" secondAttribute="centerX" id="d3C-XC-sfH"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="hVU-Gk-A8M"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRf-hW-yAH"/>
                             <constraint firstAttribute="trailing" secondItem="HXQ-lg-O4v" secondAttribute="trailing" id="m95-Ux-Tfc"/>
