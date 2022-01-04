@@ -21,7 +21,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
-    @IBOutlet weak var share: UIButton!
+    @IBOutlet weak var share: UIBarButtonItem!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var toolBar: UIToolbar!
     
     func prepareTextField(_ textField: UITextField, _ text: String) {
         let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -94,12 +96,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    func handleNavigatinItemsVisibility(_ visible: Bool) {
+        self.navBar.isHidden = visible
+        self.toolBar.isHidden = visible
+    }
+    
     func generateMemedImage() -> UIImage {
+        // hide navbar and toolbar
+        handleNavigatinItemsVisibility(true)
+        
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        
+        // put back navbar and toolbar
+        handleNavigatinItemsVisibility(false)
 
         return memedImage
     }

@@ -34,7 +34,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-bY-V5a" userLabel="Bottom Text Field">
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-bY-V5a" userLabel="Bottom Text Field">
                                 <rect key="frame" x="24" y="650" width="327" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -43,7 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-hh-Y2i" userLabel="Top Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-hh-Y2i" userLabel="Top Text Field">
                                 <rect key="frame" x="24" y="83" width="327" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -52,14 +52,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-wR-Tio">
-                                <rect key="frame" x="0.0" y="44" width="61.333333333333336" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Share"/>
-                                <connections>
-                                    <action selector="shareMeme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qt5-4b-cm9"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0B-OV-Mqw">
+                                <rect key="frame" x="0.0" y="39" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Meme Me" id="lXZ-aj-obD">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="Fbf-MM-lZr">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="2al-A3-ICH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,16 +76,13 @@
                             <constraint firstAttribute="bottom" secondItem="HXQ-lg-O4v" secondAttribute="bottom" constant="24" id="LmX-DG-vyb"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Tkf-U2-rys"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Xjp-F2-VmG"/>
-                            <constraint firstItem="6ya-wR-Tio" firstAttribute="leading" secondItem="xMH-uD-1fO" secondAttribute="leading" id="ZvV-41-yn9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RAP-bY-V5a" secondAttribute="trailing" constant="24" id="cDe-mc-2Xy"/>
                             <constraint firstItem="RAP-bY-V5a" firstAttribute="centerX" secondItem="xMH-uD-1fO" secondAttribute="centerX" id="d3C-XC-sfH"/>
-                            <constraint firstItem="6ya-wR-Tio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gWI-HP-KiF"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="hVU-Gk-A8M"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRf-hW-yAH"/>
                             <constraint firstAttribute="trailing" secondItem="HXQ-lg-O4v" secondAttribute="trailing" id="m95-Ux-Tfc"/>
                             <constraint firstItem="xMH-uD-1fO" firstAttribute="leading" secondItem="HXQ-lg-O4v" secondAttribute="leading" id="mCI-QI-Vg4"/>
                             <constraint firstItem="2Jq-hh-Y2i" firstAttribute="centerX" secondItem="xMH-uD-1fO" secondAttribute="centerX" id="qD7-y5-M39"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6ya-wR-Tio" secondAttribute="trailing" symbolic="YES" id="u2q-8C-rZG"/>
                             <constraint firstItem="2Jq-hh-Y2i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="ysq-Bg-MUL"/>
                         </constraints>
                     </view>
@@ -88,7 +90,9 @@
                         <outlet property="bottomText" destination="RAP-bY-V5a" id="ith-Jf-2UP"/>
                         <outlet property="cameraButton" destination="EYa-HD-PbR" id="HPP-24-Gvo"/>
                         <outlet property="imagePickerView" destination="xMH-uD-1fO" id="DqG-Qp-dFm"/>
-                        <outlet property="share" destination="6ya-wR-Tio" id="rEZ-g1-FSL"/>
+                        <outlet property="navBar" destination="g0B-OV-Mqw" id="L7z-Wj-KNP"/>
+                        <outlet property="share" destination="Fbf-MM-lZr" id="4G1-Sk-FW3"/>
+                        <outlet property="toolBar" destination="HXQ-lg-O4v" id="nhG-My-ROG"/>
                         <outlet property="topText" destination="2Jq-hh-Y2i" id="kXY-d9-xTj"/>
                     </connections>
                 </viewController>
@@ -98,6 +102,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
