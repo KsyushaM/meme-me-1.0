@@ -48,6 +48,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
+        self.share.isEnabled = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,6 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[.originalImage] as? UIImage {
             imagePickerView.image = image
         }
+        self.share.isEnabled = true
         dismiss(animated: true, completion: nil)
     }
     
@@ -118,8 +120,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save() {
-            // Create the meme
-            let _ = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: self.imagePickerView.image!, memedImage: generateMemedImage())
+        // Create the meme
+        let _ = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: self.imagePickerView.image!, memedImage: generateMemedImage())
     }
 
     @IBAction func pickAnImageFromLibrary(_ sender: Any) {
@@ -127,7 +129,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         pickerController.delegate = self
         pickerController.sourceType = .photoLibrary
         present(pickerController, animated: true, completion: nil)
-        
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
