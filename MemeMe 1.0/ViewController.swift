@@ -123,19 +123,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Create the meme
         let _ = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: self.imagePickerView.image!, memedImage: generateMemedImage())
     }
-
-    @IBAction func pickAnImageFromLibrary(_ sender: Any) {
+    
+    func pickAnImage(_ source: UIImagePickerController.SourceType) {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
+        pickerController.sourceType = source
         present(pickerController, animated: true, completion: nil)
+    }
+
+    @IBAction func pickAnImageFromLibrary(_ sender: Any) {
+        pickAnImage(.photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .camera
-        present(pickerController, animated: true, completion: nil)
+        pickAnImage(.camera)
     }
     
     @IBAction func shareMeme(_ sender: Any) {
